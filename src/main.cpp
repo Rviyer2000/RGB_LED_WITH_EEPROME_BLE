@@ -83,11 +83,11 @@ void process_command() {
         if (command.indexOf("R") == 0) {setStripColor(255, 0, 0);} // Set full RED color
    else if (command.indexOf("G") == 0) {setStripColor(0, 255, 0);} // Set GREEN color
    else if (command.indexOf("B") == 0) {setStripColor(0, 0, 255);} // Set BLUE color
-   else if (command.indexOf("WA") == 0) {setStripColor(255,128, 0);} // Set Warm color
-   else if (command.indexOf("P") == 0) {setStripColor(255,128, 0);} // Set Warm color
-   else if (command.indexOf("C") == 0) {setStripColor(255,128, 0);} // Set Warm color
-   else if (command.indexOf("WH") == 0) {setStripColor(255,128, 0);} // Set Warm color
-   else if (command.indexOf("Z") == 0) {setStripColor(255,128, 0);} // Set Warm color
+   else if (command.indexOf("Wa") == 0) {setStripColor(255,128, 0);} // Set Warm color
+   else if (command.indexOf("P") == 0) {setStripColor(255,0, 255);} // Set Warm color
+   else if (command.indexOf("C") == 0) {setStripColor(0,255, 255);} // Set Warm color
+   else if (command.indexOf("WH") == 0) {setStripColor(255,255, 255);} // Set Warm color
+   else if (command.indexOf("Z") == 0) {setStripColor(0,0, 0);} // Set Warm color
    else if (command.indexOf("b+") == 0) { brightness += brightness_control_level;if (brightness > 255) {brightness = 255;}strip.setBrightness(brightness);SerialBT.println("brightness = " + String(brightness));strip.show();}
    else if (command.indexOf("b-") == 0) {  brightness -= brightness_control_level;if (brightness < 1) {brightness = 1;}strip.setBrightness(brightness);SerialBT.println("brightness = " + String(brightness));strip.show();} 
    else if (command.indexOf("n+") == 0) { NUMPIXELS += number_of_changing_pixels; strip.updateLength(NUMPIXELS);SerialBT.println("Nuber of pixels = " + String(NUMPIXELS));setStripColor(r, g, b);}
