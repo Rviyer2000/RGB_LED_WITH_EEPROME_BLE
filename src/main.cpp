@@ -3,7 +3,7 @@
 
 #define DEBUG 1
 
-#define LEDPIN 23
+#define LEDPIN 27
 
 #define RED 255, 0, 0
 #define GREEN 0, 255, 0
@@ -106,7 +106,7 @@ void command_handler() {
 }
 
 void eeprom_setup(){
-  EEPROM.begin(512);
+  EEPROM.begin(4096);
   EEPROM.get(EEPROM_ADDR_numpixels, NUMPIXELS);
   strip.updateLength(NUMPIXELS);
   EEPROM.get(EEPROM_ADDR_brightness, brightness);
